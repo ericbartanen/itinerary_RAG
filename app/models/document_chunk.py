@@ -19,4 +19,7 @@ class DocumentChunk(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
 
-    document = relationship("Document", back_populates="chunks")
+    document = relationship(
+        "Document", 
+        back_populates="chunks"
+    )

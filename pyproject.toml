@@ -11,4 +11,5 @@ dependencies = [
     "python-dotenv",
     "pydantic-settings",
     "openai",
+    "alembic>=1.18.4",
 ]
